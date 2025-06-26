@@ -37,46 +37,29 @@ namespace LeetCode_Problems
 
         public int[] TwoSum_NotSoPerfectApproach(int[] nums, int target)
         {
+            //sort the array
+            
             var numsWithIndex = nums
             .Select((value, index) => new { Value = value, Index = index })
             .OrderBy(x => x.Value).ToArray();
-            int n = numsWithIndex.Length;
-            for (int i = 0; i < n; i++)
+            
+            //Two pointers
+                int low = 0;
+                int high = numsWithIndex.Length - 1;
+                Console.WriteLine("", low, high);
+                while (low < high)
             {
-                int find = target - numsWithIndex[i].Value;
-
-                //Binary Search to find find
-                int low = 0; 
-                int high = n - 1;
-                while (low <= high)
+                int sum = numsWithIndex[low].Value + numsWithIndex[high].Value;
+                if (sum == target && low != high)
                 {
-                    int mid = low + (high - low) / 2;
-                    if (mid == i)
-                    {
-                        if (mid < numsWithIndex[i].Value)
-                            low = mid + 1;
-                        else
-                            high = mid - 1;
-                        continue;
-                    }
-                    if (numsWithIndex[mid].Value == find)
-                    {
-                        // Found the pair
-                        return new int[] { numsWithIndex[i].Index, numsWithIndex[mid].Index };
-                    }
-                    else if (numsWithIndex[mid].Value < find)
-                    {
-                        low = mid + 1;
-                    }
-                    else
-                    {
-                        high = mid - 1;
-                    }
+                    return new int[] { numsWithIndex[low].Index, numsWithIndex[high].Index };
                 }
+                if (sum < target)
+                    low++;
+                else
+                    high--;
             }
             return new int[0];
         }
-
-
     }
 }
