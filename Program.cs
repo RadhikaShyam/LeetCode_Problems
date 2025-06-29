@@ -1,6 +1,8 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using System;
 using LeetCode_Problems;
+using LongestSubstring;
+using AddTwoNumbers;
 
 class Program
 {
@@ -42,5 +44,11 @@ class Program
             result_op = result_op.next;
         }
         Console.WriteLine("]");
+
+        //Longest substring
+        Solution_3 sol = new Solution_3();
+        string s = "pwwkew";
+         int result_3 = sol.LengthOfLongestSubstring(s);
+        Console.WriteLine(result_3);
     }
 }
