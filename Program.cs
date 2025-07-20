@@ -50,5 +50,18 @@ class Program
         string s = "pwwkew";
          int result_3 = sol.LengthOfLongestSubstring(s);
         Console.WriteLine(result_3);
+
+        // Median Of two sorted arrays result is 2 here
+        Solution_4 solved = new Solution_4();
+        int[] nums1 = [1, 3];
+        int[] nums2 = [2];
+        double resultMedian = solved.FindMedianSortedArrays_Optimal(nums1, nums2);
+        Console.WriteLine(resultMedian);
+         
+        // Container with most water  output is 49
+        Solution_6 solv = new Solution_6();
+        int[] height = [1,8,6,2,5,4,8,3,7] ;
+        int result_Cont = solv.MaxArea_Optimal(height);
+         Console.WriteLine(result_Cont);
     }
 }
