@@ -85,5 +85,15 @@ class Program
         int tar = 1;
         int threesumClosest = sol_9.ThreeSumClosest_Optimal(tnums,tar);
         Console.WriteLine(threesumClosest);
+
+        // Four Sum
+        Solution_10 sol_10 = new Solution_10();
+        int[] fournum = [1,0,-1,0,-2,2];
+        int tr = 0;
+        IList<IList<int>> foursum = sol_10.FourSum_Optimal(fournum,tr);
+        foreach (var quadlet in foursum)
+        {
+            Console.WriteLine($"[{string.Join(", ", quadlet)}]");
+        }
     }
 }
