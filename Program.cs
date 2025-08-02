@@ -69,5 +69,14 @@ class Program
         string[] strs = ["flower","flow","flight"];
         string result_prefix = sol_7.LongestCommonPrefix_Optimal(strs);
         Console.WriteLine(result_prefix); 
+
+         // Three Sum
+        Solution_8 sol_8 = new Solution_8();
+        int[] threenum = [-1, 0, 1, 2, -1, -4];
+        IList<IList<int>> threesum = sol_8.ThreeSum_BF(threenum);
+        foreach (var triplet in threesum)
+        {
+            Console.WriteLine($"[{string.Join(", ", triplet)}]");
+        }
     }
 }
