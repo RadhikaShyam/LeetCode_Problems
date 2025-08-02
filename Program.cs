@@ -63,5 +63,11 @@ class Program
         int[] height = [1,8,6,2,5,4,8,3,7] ;
         int result_Cont = solv.MaxArea_Optimal(height);
          Console.WriteLine(result_Cont);
+
+        // Longest Common Prefix
+        Solution_7 sol_7 = new Solution_7();
+        string[] strs = ["flower","flow","flight"];
+        string result_prefix = sol_7.LongestCommonPrefix_Optimal(strs);
+        Console.WriteLine(result_prefix); 
     }
 }
