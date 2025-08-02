@@ -78,5 +78,12 @@ class Program
         {
             Console.WriteLine($"[{string.Join(", ", triplet)}]");
         }
+
+        // Three Sum Closest
+        Solution_9 sol_9 = new Solution_9();
+        int[] tnums = [-1,2,1,-4];
+        int tar = 1;
+        int threesumClosest = sol_9.ThreeSumClosest_Optimal(tnums,tar);
+        Console.WriteLine(threesumClosest);
     }
 }
