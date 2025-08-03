@@ -95,5 +95,11 @@ class Program
         {
             Console.WriteLine($"[{string.Join(", ", quadlet)}]");
         }
+
+        //Palindrome Number
+        Solution_11 sol_11 = new Solution_11();
+        int pa = 121;
+        bool result_11 = sol_11.IsPalindrome_BF(pa);
+        Console.WriteLine(result_11);
     }
 }
